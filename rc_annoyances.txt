@@ -1,0 +1,21 @@
+! title:          Remove RC's UI annoyances
+! last updated:   Fri, 03 Nov 2023 19:35:40 GMT
+! credits:        Célestine Gramaize - @dscp46 / @isithran - https://gensokyo.tf/links/
+! this URL:       https://raw.githubusercontent.com/dscp46/ublock_filters/main/rc_annoyances.txt
+!
+! This list has been built to strip the common annoyances with RC's management interface, and the support gave me back a
+! boilerplate answer when I reported issues with language selection and the cookie banner on a private sessions.
+!
+! Onetrust Cookie Banner
+service.ringcentral.eu###onetrust-consent-sdk
+service.ringcentral.eu##body:style(overflow: auto !important)
+service.ringcentral.com###onetrust-consent-sdk
+service.ringcentral.com##body:style(overflow: auto !important)
+analytics.ringcentral.com###onetrust-consent-sdk
+analytics.ringcentral.com##body:style(overflow: auto !important)
+support.ringcentral.com###onetrust-consent-sdk
+support.ringcentral.com##body:style(overflow: auto !important)
+! Language selection prompt
+service.ringcentral.eu##div:has(> div:has(div[data-test-automation-id="languageConfirmation"]))
+service.ringcentral.com##div:has(> div:has(div[data-test-automation-id="languageConfirmation"]))
+
